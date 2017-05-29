@@ -1,6 +1,7 @@
-# This one is simple enough, just do seconds times minutes times hours times
-# days, where days is days in a year times number of years, plus leap days plus
-# days since my birthday. If you really really wanted to, you could count from
-# the time of day you were born, but to be honest that seems a little excessive.
+# This one is a little odd, but not that bad overall. We start by calculating
+# the number of days since our birth. That's 365 times our age, plus the number
+# of leap days we've lived through, plus the number of days since our birthday.
+# Then, we just multiply by 24 to get that in hours, 60 for minutes, and another
+# 60 for seconds.
 
-puts 'I am ' + (60 * 60 * 24 * (365 * 20 + 5 + 88)).to_s + ' seconds old.'
+puts 'I am ' + ((365 * 20 + 5 + 88) * 24 * 60 * 60).to_s + ' seconds old.'
