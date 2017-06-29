@@ -29,5 +29,5 @@ end
 words.pop
 
 shuffled = shuffle(words)
-puts 'Here are your sorted words:'
+puts 'Here are your shuffled words:'
 puts shuffled
