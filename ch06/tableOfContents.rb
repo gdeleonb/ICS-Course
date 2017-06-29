@@ -1,7 +1,9 @@
-# This once can be really annoying until you realize how the '.center',
-# '.ljust', and '.rjust' work. Once you have that though, it's a simple matter
-# of making sure they add up to the same number and messing around with the
-# spaces a bit.
+=begin
+This once can be really annoying until you realize how the '.center',
+'.ljust', and '.rjust' work. Once you have that though, it's a simple matter
+of making sure they add up to the same number and messing around with the
+spaces a bit.
+=end
 
 puts 'Table of Contents'.center(50)
 puts
