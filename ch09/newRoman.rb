@@ -1,8 +1,10 @@
-# For this one, we're dealing with the added difficulty of accounting for new
-# symbols for the 4s and 9s. To address it, you could do a series of if checks
-# for each one. However, a good understanding modulo lets you simplify it to
-# similar format as the oldRoman one, just with a few more lines for the new
-# symbols, and an extra modulo to account for them in the others.
+=begin
+For this one, we're dealing with the added difficulty of accounting for new
+symbols for the 4s and 9s. To address it, you could do a series of if checks
+for each one. However, a good understanding modulo lets you simplify it to
+similar format as the oldRoman one, just with a few more lines for the new
+symbols, and an extra modulo to account for them in the others.
+=end
 
 def romanize(num)
   ms  =  num                    / 1000

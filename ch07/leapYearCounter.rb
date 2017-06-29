@@ -1,8 +1,10 @@
-# Main thing to keep in mind for this one is the checks to see if a given year
-# was a leap year. As seen below, those are that the year be divisible by 400
-# (checked for using modulo), or that it be divisible by 4 AND not divisible
-# by 100. Beyond that the code isn't too bad. We just get our boundaries, and
-# loop through the years in between, printing out the ones that pass the checks
+=begin
+Main thing to keep in mind for this one is the checks to see if a given year
+was a leap year. As seen below, those are that the year be divisible by 400
+(checked for using modulo), or that it be divisible by 4 AND not divisible
+by 100. Beyond that the code isn't too bad. We just get our boundaries, and
+loop through the years in between, printing out the ones that pass the checks
+=end
 
 puts 'Please enter the lower limit of the desired range:'
 low_end = gets.chomp.to_i

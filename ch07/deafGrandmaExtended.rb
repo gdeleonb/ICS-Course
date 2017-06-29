@@ -1,8 +1,10 @@
-# This one is very similar to the standard deafGrandma, so I'll only document
-# the changes we made to get it to work with the three 'BYE's
+=begin
+This one is very similar to the standard deafGrandma, so I'll only document
+the changes we made to get it to work with the three 'BYE's
 
-# Main thing is the creation of this variable which keeps track of how many
-# times we've said 'BYE' in a row (that part is important)
+Main thing is the creation of this variable which keeps track of how many
+times we've said 'BYE' in a row (that part is important)
+=end
 counter = 0
 puts 'COME GIVE GRANNY A KISS!'
 

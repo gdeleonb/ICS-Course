@@ -1,3 +1,5 @@
+# We ask for the number, add one to it, and suggest it as a better one
+
 puts 'Hey there! What\'s your favorite number?'
 favNum = gets.chomp.to_i
 

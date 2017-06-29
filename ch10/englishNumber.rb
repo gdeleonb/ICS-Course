@@ -1,5 +1,7 @@
-# This one is relatively simple. You're really just copy pasting the code for
-# hundreds, adding zeros, and changing the word.
+=begin
+This one is relatively simple. You're really just copy pasting the code for
+hundreds, adding zeros, and changing the word.
+=end
 
 def englishNumber(num)
   if num < 0

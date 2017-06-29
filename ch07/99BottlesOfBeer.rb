@@ -1,8 +1,10 @@
-# A lot of people have trouble with this one. For loops, the easiest way to
-# think about it is to identify what are the parts that you can have the loop
-# take care of for you, and what are the outliers you'll have to hard code. For
-# this one, most of the lyrics can be printed out within the loop, and only the
-# last four lines have to be hardcoded.
+=begin
+A lot of people have trouble with this one. For loops, the easiest way to
+think about it is to identify what are the parts that you can have the loop
+take care of for you, and what are the outliers you'll have to hard code. For
+this one, most of the lyrics can be printed out within the loop, and only the
+last four lines have to be hardcoded.
+=end
 
 beers = 99
 

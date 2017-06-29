@@ -1,8 +1,10 @@
-# It's really just the method that I'll be checking over. As with most of our
-# loops, I used a simple 'while true' here. The method begins by asking the
-# question and getting the response. It returns 'true' or 'false' if the
-# response is either 'yes' or 'no', and otherwise asks that you reply one of
-# the two before looping again.
+=begin
+It's really just the method that I'll be checking over. As with most of our
+loops, I used a simple 'while true' here. The method begins by asking the
+question and getting the response. It returns 'true' or 'false' if the
+response is either 'yes' or 'no', and otherwise asks that you reply one of
+the two before looping again.
+=end
 
 def ask(question)
 	while true

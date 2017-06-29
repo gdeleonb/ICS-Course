@@ -1,5 +1,7 @@
-# Start by just copy pasting englishNumber(num) straight over. To avoid repeated
-# scrolling, rest of the explanation is below that.
+=begin
+Start by just copy pasting englishNumber(num) straight over. To avoid repeated
+scrolling, rest of the explanation is below that.
+=end
 
 def englishNumber(num)
   if num < 0

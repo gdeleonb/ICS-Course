@@ -1,7 +1,9 @@
-# This one is relatively simple so long as you make sure to use 'gets.chomp'
-# instead of just 'gets'. If you want to use apostrophes in strings, you'll want
-# to either use double quotes to mark the string, or escape it using a
-# backslash. I demonstrate both below.
+=begin
+This one is relatively simple so long as you make sure to use 'gets.chomp'
+instead of just 'gets'. If you want to use apostrophes in strings, you'll want
+to either use double quotes to mark the string, or escape it using a
+backslash. I demonstrate both below.
+=end
 
 puts "What's your first name?"
 firstName = gets.chomp
