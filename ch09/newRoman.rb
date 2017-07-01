@@ -1,33 +1,55 @@
 =begin
-For this one, we're dealing with the added difficulty of accounting for new
-symbols for the 4s and 9s. To address it, you could do a series of if checks
-for each one. However, a good understanding modulo lets you simplify it to
-similar format as the oldRoman one, just with a few more lines for the new
-symbols, and an extra modulo to account for them in the others.
+Before anything else, credit goes to @madhekare from the Summer '17 class for
+the base idea. It was definitely an improvement over my previous
+implementation, so I've updated this with some tweaks and her permission.
+
+First off, we have a short check to make sure we have a valid input. Then we
+initialize our two arrays of integers and roman numerals, our string, and
+store our input in the variable 'remainder' (reason for name will become
+clear).
+
+The key part is line 38, so let's take a close look at that line:
+ - `.zip` is one that 'zips' together two arrays, creating an array made up
+    of arrays, with the nth array containing the nth entries for each array
+ - `.each` acts like a for loop, for every item the array it is called on,
+    it executes the 'do' block. Since there's two items in each element of
+    our array (remember, it's an array of arrays that each contain 2 items!),
+    we can access those two directly by giving the block two arguments
+    instead of just one!
+
+Inside this block, we calculate how many times this roman numeral should
+appear in our final string, add them to it (if it's zero nothing will be
+added!), and use modulo to find the remainder once we've represented this
+part using roman numerals.
+
+At the end of our function, we just call our string to return it.
 =end
 
-def romanize(num)
-  ms  =  num                    / 1000
+def romanize(input)
+  if input <= 0 || input > 3000
+    return 'Please give a number between 1 and 3000.'
+  end
 
-  cms =  num  %  1000           /  900
-  ds  =  num  %  1000  %  900   /  500
-  cds =  num  %   900  %  500   /  400
-  cs  =  num  %   500  %  400   /  100
+  ints = [1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1]
+  romNums = ["M","CM","D","CD","C","XC","L","XL","X","IX","V","IV","I"]
+  string = ''
+  remainder = input
 
-  xcs =  num  %   100           /   90
-  ls  =  num  %   100  %   90   /   50
-  xls =  num  %    90  %   50   /   40
-  xs  =  num  %    50  %   40   /   10
+  ints.zip(romNums).each do |int, romNum|
+    quotient = remainder / int
+    string += romNum * quotient
+    remainder = remainder % int
+  end
 
-  ixs =  num  %    10           /    9
-  vs  =  num  %    10  %    9   /    5
-  ivs =  num  %     9  %    5   /    4
-  is  =  num  %     5  %    4   /    1
-
-  return 'M'*ms + 'CM'*cms + 'D'*ds + 'CD'*cds + 'C'*cs + 'XC'*xcs + 'L'*ls + 'XL'*xls + 'X'*xs + 'IX'*ixs + 'V'*vs + 'IV'*ivs + 'I'*is
+  string
 end
 
-puts 'Please enter the number you wish translated into Modern Roman Numerals:'
-num = gets.chomp.to_i
-puts
-puts num.to_s + ' in Modern Roman Numerals is: ' + romanize(num)
+while true
+  puts 'What number do you want translated? It must be between 1 and 3000!'
+  number = gets.chomp
+  if number == 'end'
+    break
+  else
+    puts number + ' in Modern Roman Numerals is: ' + romanize(number.to_i)
+  end
+end
