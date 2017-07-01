@@ -27,7 +27,8 @@ At the end of our function, we just call our string to return it.
 
 def romanize(input)
   if input <= 0 || input > 3000
-    return 'Please give a number between 1 and 3000.'
+    puts 'Please give a number between 1 and 3000.'
+    return -1
   end
 
   ints = [1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1]
@@ -50,6 +51,9 @@ while true
   if number == 'end'
     break
   else
-    puts number + ' in Modern Roman Numerals is: ' + romanize(number.to_i)
+    romNum = romanize(number.to_i)
+    if romNum != -1
+      puts number + ' in Modern Roman Numerals is: ' + romanize(number.to_i)
+    end
   end
 end
